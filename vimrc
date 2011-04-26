@@ -196,7 +196,6 @@ let g:fuf_splitPathMatching=1
 " Open URL
 command -bar -nargs=1 OpenURL :!open <args>
 
-
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 

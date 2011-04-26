@@ -16,8 +16,14 @@ else
   export RPS1="$PR_MAGENTA(%*)$PR_NO_COLOR"
 fi
 
+GROOVY_HOME=/usr/share/groovy
+export GROOVY_HOME
+
+SCALA_HOME=/Users/petter/scala
+export SCALA_HOME
+
 export EDITOR='mate -w'
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$SCALA_HOME/bin:$GROOVY_HOME/bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 fpath=(~/.zsh/functions $fpath)
@@ -27,6 +33,10 @@ autoload -U ~/.zsh/functions/*(:t)
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
+setopt HIST_VERIFY
+setopt SHARE_HISTORY # share history between sessions ???
+setopt EXTENDED_HISTORY # add timestamps to history
+
 REPORTTIME=10 # print elapsed time when more than 10 seconds
 
 setopt NO_BG_NICE # don't nice background tasks
@@ -34,9 +44,6 @@ setopt NO_HUP
 setopt NO_LIST_BEEP
 setopt LOCAL_OPTIONS # allow functions to have local options
 setopt LOCAL_TRAPS # allow functions to have local traps
-setopt HIST_VERIFY
-setopt SHARE_HISTORY # share history between sessions ???
-setopt EXTENDED_HISTORY # add timestamps to history
 setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
@@ -46,6 +53,8 @@ setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
+
+hi () { history 0 | grep $1 }
 
 zle -N newtab
 

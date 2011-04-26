@@ -4,7 +4,7 @@ alias ..='cd ..'
 # ls
 alias ls="ls -G"
 alias l="ls -lAGh"
-alias ll="ls -l"
+alias ll="ls -la"
 alias la='ls -A'
 
 # rails
@@ -12,4 +12,7 @@ alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 
 # commands starting with % for pasting from web
-alias %=' '
+alias %=
+
+# editor
+alias mate='/Applications/Fraise.app/Contents/MacOS/Fraise'
