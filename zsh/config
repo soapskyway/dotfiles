@@ -22,7 +22,7 @@ export GROOVY_HOME
 SCALA_HOME=/Users/petter/scala
 export SCALA_HOME
 
-export EDITOR='mate -w'
+export EDITOR='vim'
 export PATH="/usr/local/bin:/usr/local/sbin:$SCALA_HOME/bin:$GROOVY_HOME/bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
