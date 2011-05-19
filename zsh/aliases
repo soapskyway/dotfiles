@@ -15,4 +15,4 @@ alias migrate='rake db:migrate db:test:clone'
 alias %=
 
 # editor
-alias mate='/Applications/Fraise.app/Contents/MacOS/Fraise'
+alias mate='mvim'
